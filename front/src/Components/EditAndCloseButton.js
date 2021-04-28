@@ -49,15 +49,13 @@ const EditAndCloseButton = (props) => {
             className="modal fade"
             id="closePostModal"
             tabIndex="-1"
-            aria-labelledby="exampleModalLabel"
+            aria-labelledby="closePostModal"
             aria-hidden="true"
           >
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h5 className="modal-title" id="exampleModalLabel">
-                    Close your current post
-                  </h5>
+                  <h5 className="modal-title">Close your current post</h5>
                   <button
                     type="button"
                     className="btn-close"
@@ -76,6 +74,7 @@ const EditAndCloseButton = (props) => {
                   <button
                     type="button"
                     className="btn btn-secondary"
+                    id="closeCancel"
                     data-bs-dismiss="modal"
                   >
                     Cancel

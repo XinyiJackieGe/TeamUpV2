@@ -6,44 +6,54 @@
   width: 750px;
 }
 
+.postFormTitle {
+  margin-top: 10px;
+}
+
 .form-group {
   margin-top: 30px;
   margin-left: 60px;
 }
 
-#title, #category, #description {
+#title,
+#category,
+#description {
   width: 600px;
 }
 
 .require {
-  margin-left: 175px;
+  margin-left: 60px;
 }
 
-#createPost {
+#createPost,
+#editPost {
   float: left;
-  background-color: #FA500C;
-  border: none;
+  background-color: #d1420a;
+  border: solid 1px #d1420a;
 }
 
-#createPost:hover {
-  background-color: #C74009;
-  border: none;
+#createPost:hover,
+#editPost:hover {
+  background-color: #fa500c;
+  border: solid 1px #fa500c;
 }
 
 #cancel {
   margin-left: 20px;
   float: left;
-  color: #FA500C;
-  border: solid 1px #FA500C;
+  color: #d1420a;
+  border: solid 1px #d1420a;
+  background-color: white;
 }
 
 #cancel:hover {
-  color: #C74009;
-  border: solid 1px #C74009;
+  color: #fa500c;
+  border: solid 1px #fa500c;
 }
 
-#createPost, #cancel {
-  width: 100px;
+#createPost,
+#cancel,
+#editPost {
+  width: 80px;
   margin-bottom: 20px;
 }
-

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 const LikeButton = (props) => {
-  const { post } = props;
+  const { post, userid } = props;
   const [like, setLike] = useState(false);
-  const loggedInUser = JSON.parse(localStorage.getItem("user"));
 
   function clickLike() {
     setLike(!like);
@@ -12,8 +11,8 @@ const LikeButton = (props) => {
   useEffect(() => {
     if (post.interested) {
       for (let i = 0; i < post.interested.length; i++) {
-        if (post.interested[i].userId === loggedInUser.userid) {
-          clickLike();
+        if (post.interested[i].userId === userid) {
+          setLike(true);
           break;
         }
       }
@@ -50,7 +49,7 @@ const LikeButton = (props) => {
     });
   };
 
-  if (post.open) {
+  if (post.open && userid) {
     if (!like) {
       return (
         <button

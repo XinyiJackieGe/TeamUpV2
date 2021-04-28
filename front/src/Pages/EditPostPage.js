@@ -57,25 +57,28 @@ const EditPostPage = () => {
   };
 
   return (
-    <div className="container" id="postContainer">
+    <div className="container" id="postContainer" role="main">
       <div className="row">
+        <h3 className="center-block text-center postFormTitle">Edit Post</h3>
         <div className="col-md-8 col-md-offset-2">
-          <h4>Edit Post</h4>
           <form action="">
             <div className="form-group">
-              <label for="title">Title</label>
+              <label htmlFor="title">Title</label>
 
               <input
                 type="text"
                 className="form-control"
+                id="title"
                 name="title"
                 value={post.title}
                 disabled
               />
             </div>
             <div className="form-group">
+              <label htmlFor="category">Category</label>
               <select
                 className="form-select form-control"
+                id="category"
                 value={cat}
                 name="category"
                 disabled
@@ -94,6 +97,8 @@ const EditPostPage = () => {
                 rows="5"
                 className="form-control"
                 name="description"
+                id="description"
+                aria-label="description"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
               ></textarea>
@@ -104,7 +109,7 @@ const EditPostPage = () => {
                 type="submit"
                 className="btn btn-primary"
                 onClick={editPost}
-                id="editPost"
+                id="createPost"
               >
                 Edit
               </button>

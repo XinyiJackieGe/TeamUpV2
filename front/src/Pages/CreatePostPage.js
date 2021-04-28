@@ -17,6 +17,8 @@ const CreatePostPage = () => {
     event.preventDefault();
     if (title === "" || cat === "") {
       alert("Post must have a title and category.");
+    } else if (title.length > 50) {
+      alert("Your title is too long, please keep it short and concise.");
     } else {
       const resRaw = await fetch("/createPost", {
         method: "POST",
@@ -40,13 +42,13 @@ const CreatePostPage = () => {
   };
 
   return (
-    <div className="container" id="postContainer">
-      <h3>Create Post</h3>
+    <div className="container" id="postContainer" role="main">
       <div className="row">
+        <h3 className="center-block text-center postFormTitle">Create Post</h3>
         <div className="col-md-8 col-md-offset-2">
           <form action="">
             <div className="form-group">
-              <label for="title">Title *</label>
+              <label htmlFor="title">Title *</label>
 
               <input
                 type="text"
@@ -57,6 +59,7 @@ const CreatePostPage = () => {
               />
             </div>
             <div className="form-group">
+              <label htmlFor="category">Category *</label>
               <select
                 className="form-select form-control"
                 id="category"
@@ -81,6 +84,7 @@ const CreatePostPage = () => {
                 className="form-control"
                 id="description"
                 name="description"
+                aria-label="description"
                 onChange={(e) => setContent(e.target.value)}
               ></textarea>
             </div>

@@ -1,23 +1,19 @@
 .nav-link {
-  color: #808080;
-  padding-top: 10px;
+  color: #ffffff;
+  padding-top: 10px
 }
 
 a.nav-link:hover {
-    color: #C74009;
+  color: black;
 }
 
 .navbar-toggler {
-  background-color: #ffffff;
-  border:solid #C74009;
+  background-color: #d1420a;
+  border: solid #808080;
 }
 
 .nav-item {
-  border-color: #808080;
-  background-color: #ffffff;
-  color: #808080;
+  border-color: #d1420a;
+  background-color: #d1420a;
 }
 
-.navbar, .navbar-collapse {
-  color: #C74009;
-}
